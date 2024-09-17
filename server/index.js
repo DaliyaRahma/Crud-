@@ -5,7 +5,11 @@ const UserModel = require('./models/Users');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [""],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
 
 mongoose.connect('mongodb+srv://crud:crud1234@cluster0.fa5yt.mongodb.net/users');
 
