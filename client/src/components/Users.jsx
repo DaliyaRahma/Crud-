@@ -12,7 +12,7 @@ const Users = () => {
     }, []);
 
     const handleDelete=(id)=>{
-        axios.delete(`https://crud-api-ochre.vercel.app/${id}`)
+        axios.delete(`https://crud-api-ochre.vercel.app/deleteUser/${id}`)
         .then(res=>{console.log(res)
             window.location.reload()
             alert('user deleted successfully')
