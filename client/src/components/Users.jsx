@@ -6,13 +6,13 @@ const Users = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-      axios.get("http://localhost:3001/")
+      axios.get("https://crud-api-ochre.vercel.app")
         .then((response) => setUsers(response.data))
         .catch((error) => console.log(error));
     }, []);
 
     const handleDelete=(id)=>{
-        axios.delete(`http://localhost:3001/deleteUser/${id}`)
+        axios.delete(`https://crud-api-ochre.vercel.app/${id}`)
         .then(res=>{console.log(res)
             window.location.reload()
             alert('user deleted successfully')
