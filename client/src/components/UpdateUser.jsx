@@ -12,7 +12,7 @@ const UpdateUser = () => {
     const Navigate= useNavigate();
 
     useEffect (()=>{
-        axios.get(`http://localhost:3001/users/${id}`)
+        axios.get(`https://crud-api-ochre.vercel.app/users/${id}`)
 
         
         .then(response=>{console.log(response)
@@ -26,7 +26,7 @@ const UpdateUser = () => {
 
     const Submit = (e) =>{
         e.preventDefault();
-        axios.put(`http://localhost:3001/updateUser/${id}` ,{name, email, age} )
+        axios.put(`https://crud-api-ochre.vercel.app/updateUser/${id}` ,{name, email, age} )
         .then (()=>Navigate('/'))
         .catch(error=>console.log(error))
 
