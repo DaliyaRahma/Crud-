@@ -11,7 +11,7 @@ const CreateUser = () => {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/createUser', { name, email, age })
+        axios.post('https://crud-api-ochre.vercel.app/createUser', { name, email, age })
             .then(() => {Navigate('/')
             alert('User Added Successfully')})
             .catch(error => console.log(error));
