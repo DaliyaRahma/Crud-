@@ -6,7 +6,7 @@ const UserModel = require('./models/Users');
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: [""],
+  origin: ["https://crud-inky-eight.vercel.app"],
   methods: ["POST", "GET", "PUT", "DELETE" ],
   credentials: true
 }));
